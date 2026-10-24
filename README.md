@@ -2,7 +2,8 @@
 
 > **Product definition:** an evidence-led operating system for discovering physical products, producing affiliate content, running controlled distribution experiments, and learning from measured outcomes.
 
-**Domain:** https://halvexi.biz.id (user-reported; deployment not verified)  
+**Production (Cloudflare Pages):** https://halvexi.pages.dev  
+**Custom domain:** https://halvexi.biz.id (user-reported; not yet attached to Pages)  
 **Repository:** https://github.com/Sparkmind-obp-off/Halvexi  
 **Initial market:** Indonesia  
 **Initial channel hypothesis:** TikTok / TikTok Shop affiliate, subject to account and program eligibility  
