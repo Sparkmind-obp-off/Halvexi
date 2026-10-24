@@ -12,7 +12,7 @@
 
 HALVEXI is not a bot farm or a promise of passive income. It is a human-supervised agentic workflow that helps a creator/team move from evidence to a publishable content experiment, then learn from real performance. Multiple accounts may be supported only as legitimate, clearly operated creator channels and within platform rules; no fake engagement, identity deception, ban evasion, or uncontrolled mass posting.
 
-## The core loop
+## Core loop
 
 **Evidence → Signal → Product candidate → Eligibility & economics check → Content brief → Draft assets → Human review → Publish through permitted workflow → Measure → Learn → Iterate.**
 
@@ -20,18 +20,21 @@ Every material claim must be traceable to a source or marked as an assumption. N
 
 ## Documentation index
 
-- [Vision and product requirements](docs/01-product-vision.md)
-- [MVP scope and release gates](docs/02-mvp-scope.md)
-- [Physical-product discovery and scoring](docs/03-product-discovery.md)
-- [Agent architecture and orchestration](docs/04-agent-architecture.md)
-- [Content production system](docs/05-content-production.md)
-- [TikTok-first channel and account operations](docs/06-channel-operations.md)
-- [Data model and event taxonomy](docs/07-data-model.md)
-- [Trust, compliance, and safety](docs/08-trust-compliance.md)
-- [Measurement and experiments](docs/09-measurement.md)
-- [Technical architecture](docs/10-technical-architecture.md)
-- [Delivery roadmap and acceptance criteria](docs/11-roadmap-acceptance.md)
-- [Operating runbook](docs/12-operating-runbook.md)
+- [01 — Product vision](docs/01-product-vision.md)
+- [02 — MVP scope and release gates](docs/02-mvp-scope.md)
+- [03 — Physical-product discovery and scoring](docs/03-product-discovery.md)
+- [04 — Agent architecture](docs/04-agent-architecture.md)
+- [05 — Content production system](docs/05-content-production.md)
+- [06 — TikTok-first channel operations](docs/06-channel-operations.md)
+- [07 — Data model and event taxonomy](docs/07-data-model.md)
+- [08 — Trust, safety, and compliance](docs/08-trust-compliance.md)
+- [09 — Measurement and experiments](docs/09-measurement.md)
+- [10 — Technical architecture](docs/10-technical-architecture.md)
+- [11 — Roadmap and acceptance criteria](docs/11-roadmap-acceptance.md)
+- [12 — Operating runbook](docs/12-operating-runbook.md)
+- [13 — Agent prompt contracts](docs/13-agent-prompts.md)
+- [14 — Product test worksheet](docs/14-product-test-worksheet.md)
+- [15 — Launch readiness checklist](docs/15-launch-checklist.md)
 - [Decision log](docs/DECISIONS.md)
 
 ## Non-goals for the first release
@@ -48,4 +51,4 @@ A human operator can select one eligible physical product, inspect the evidence 
 
 ## Current status
 
-This repository starts with the product blueprint only. Domain purchase is user-reported; domain configuration, deployment, DNS, code, provider connections, platform permissions, and legal/trademark clearance are **not verified by this repository change**.
+This repository contains a documentation blueprint only. Domain purchase is user-reported; domain configuration, deployment, DNS, code, provider connections, platform permissions, affiliate eligibility, and legal/trademark clearance are **not verified by this repository change**.
