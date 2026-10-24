@@ -1,54 +1,59 @@
 # HALVEXI — Agentic Affiliate Intelligence
 
-> **Working product definition:** an evidence-led operating system for discovering physical products, producing affiliate content, running controlled distribution experiments, and learning from measured outcomes.
+> **Product definition:** an evidence-led operating system for discovering physical products, producing affiliate content, running controlled distribution experiments, and learning from measured outcomes.
 
-**Domain:** https://halvexi.biz.id  
+**Domain:** https://halvexi.biz.id (user-reported; deployment not verified)  
 **Repository:** https://github.com/Sparkmind-obp-off/Halvexi  
 **Initial market:** Indonesia  
 **Initial channel hypothesis:** TikTok / TikTok Shop affiliate, subject to account and program eligibility  
-**Status:** Documentation baseline; implementation and integrations are not yet verified.
+**Current milestone:** MVP operator-console scaffold; browser-local prototype, not production deployment.
+
+## Run locally
+
+Requirements: Node.js 20+ and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Production build and type-check:
+
+```bash
+npm run build
+npm run typecheck
+```
+
+## Current working modules
+
+- **Overview:** candidate, evidence, content and manually entered measurement totals.
+- **Product Lab:** capture a physical-product candidate and score evidence readiness using explicit criteria.
+- **Evidence Ledger:** attach source URL, note, source type, confidence and observation date to a product.
+- **Content Studio:** generate three differentiated starter concepts, script outlines and affiliate disclosure draft; mark a specific draft approved for manual production.
+- **Experiments:** manually record views, clicks, orders and commission from real sources.
+- **Guardrails:** explain what is and is not connected.
+
+## Important implementation limits
+
+- This first prototype stores records in browser `localStorage` on the current browser/device. It is not multi-user, server-backed, or a safe central database.
+- D1 schema is drafted in `migrations/0001_initial.sql`, but no D1 binding or API is connected yet.
+- No AI provider, product-research provider, TikTok account, affiliate program, or publishing integration is connected.
+- Approving a draft is an internal status only. It does not publish content or verify its claims.
+- The readiness score is a deterministic checklist, not a prediction of sales or profitability.
+- Domain, DNS, deployment, production security, affiliate eligibility and legal/trademark clearance are not verified.
 
 ## Product principle
 
-HALVEXI is not a bot farm or a promise of passive income. It is a human-supervised agentic workflow that helps a creator/team move from evidence to a publishable content experiment, then learn from real performance. Multiple accounts may be supported only as legitimate, clearly operated creator channels and within platform rules; no fake engagement, identity deception, ban evasion, or uncontrolled mass posting.
+HALVEXI is not a bot farm or a promise of passive income. It is a human-supervised workflow: **Evidence → Product candidate → Eligibility & economics → Content draft → Human review → Permitted publication → Measure → Learn.** Unknown values remain unknown. No invented demand, sales, commission, product tests, testimonials or performance results.
 
-## Core loop
+## Roadmap
 
-**Evidence → Signal → Product candidate → Eligibility & economics check → Content brief → Draft assets → Human review → Publish through permitted workflow → Measure → Learn → Iterate.**
+1. Validate the browser workflow with one physical product and three differentiated concepts.
+2. Implement authenticated API + D1 persistence, migrations, audit trail and export.
+3. Add evidence-backed product research adapters after checking access rules, source quality and costs.
+4. Add provider-agnostic agent workflows with usage limits and human review.
+5. Consider publishing/analytics integrations only where official authorization and platform eligibility are verified.
 
-Every material claim must be traceable to a source or marked as an assumption. No invented demand, sales, commission, product features, testimonials, product tests, or performance results.
+## Documentation
 
-## Documentation index
-
-- [01 — Product vision](docs/01-product-vision.md)
-- [02 — MVP scope and release gates](docs/02-mvp-scope.md)
-- [03 — Physical-product discovery and scoring](docs/03-product-discovery.md)
-- [04 — Agent architecture](docs/04-agent-architecture.md)
-- [05 — Content production system](docs/05-content-production.md)
-- [06 — TikTok-first channel operations](docs/06-channel-operations.md)
-- [07 — Data model and event taxonomy](docs/07-data-model.md)
-- [08 — Trust, safety, and compliance](docs/08-trust-compliance.md)
-- [09 — Measurement and experiments](docs/09-measurement.md)
-- [10 — Technical architecture](docs/10-technical-architecture.md)
-- [11 — Roadmap and acceptance criteria](docs/11-roadmap-acceptance.md)
-- [12 — Operating runbook](docs/12-operating-runbook.md)
-- [13 — Agent prompt contracts](docs/13-agent-prompts.md)
-- [14 — Product test worksheet](docs/14-product-test-worksheet.md)
-- [15 — Launch readiness checklist](docs/15-launch-checklist.md)
-- [Decision log](docs/DECISIONS.md)
-
-## Non-goals for the first release
-
-- Autonomous publishing without an authorized platform integration and explicit human approval.
-- Automated likes, comments, follows, DMs, fake engagement, or account creation.
-- Scraping private data or bypassing access controls.
-- Claims that a product is proven, safe, trending, profitable, or available without evidence.
-- Building a custom video editor/generation engine before validating the workflow.
-
-## First success criterion
-
-A human operator can select one eligible physical product, inspect the evidence and affiliate economics, generate three differentiated content concepts, review and approve one content package, publish it using an allowed workflow, and record real performance data. The team can reproduce this loop with documented cost, time, and outcome.
-
-## Current status
-
-This repository contains a documentation blueprint only. Domain purchase is user-reported; domain configuration, deployment, DNS, code, provider connections, platform permissions, affiliate eligibility, and legal/trademark clearance are **not verified by this repository change**.
+See [docs/](docs/) for product vision, MVP scope, discovery scoring, agent design, content production, channel operations, data model, compliance, measurement, technical architecture, roadmap, runbook, agent prompts, test worksheet, launch checklist and decision log.
