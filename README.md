@@ -35,17 +35,11 @@ npm run typecheck
 
 ## Master system and agent prompts
 
-- [Master System Prompt](prompts/MASTER_SYSTEM.md) — identity, mission, workflow, truth rules, guardrails, output contract and stop conditions.
-- [Scout](prompts/agents/01-scout.md) — gather permitted product evidence.
-- [Evidence Analyst](prompts/agents/02-evidence-analyst.md) — classify facts, hypotheses and unknowns.
-- [Product Evaluator](prompts/agents/03-product-evaluator.md) — score candidates and apply hard stops.
-- [Creative Strategist](prompts/agents/04-creative-strategist.md) — create distinct content hypotheses.
-- [Script Planner](prompts/agents/05-script-planner.md) — produce short-form scripts and claims ledger.
-- [Claim Reviewer](prompts/agents/06-claim-reviewer.md) — pre-publication review and blocking decisions.
-- [Performance Analyst](prompts/agents/07-performance-analyst.md) — analyze actual experiment results.
-- [Orchestrator](prompts/agents/08-orchestrator.md) — route tasks, enforce controls and human approvals.
+- **[Unified Master System + all 8 agent prompts](prompts/HALVEXI_MASTER_SYSTEM_AND_ALL_AGENTS.md)** — the complete copyable bundle in one file.
+- [Master System Prompt](prompts/MASTER_SYSTEM.md) — standalone governing instruction.
+- [Individual agent prompts](prompts/agents/) — modular versions for separate agent calls.
 
-These are versioned prompt contracts. They are **not yet wired to a live model or agent runtime**.
+The unified file is the easiest starting point when you want the master rules and every agent prompt together. These are versioned prompt contracts and are **not yet wired to a live model or agent runtime**.
 
 ## Important implementation limits
 
