@@ -6,7 +6,7 @@
 **Repository:** https://github.com/Sparkmind-obp-off/Halvexi  
 **Initial market:** Indonesia  
 **Initial channel hypothesis:** TikTok / TikTok Shop affiliate, subject to account and program eligibility  
-**Current milestone:** MVP operator-console scaffold; browser-local prototype, not production deployment.
+**Current milestone:** MVP operator-console scaffold + master prompt pack; browser-local prototype, not production deployment.
 
 ## Run locally
 
@@ -33,6 +33,20 @@ npm run typecheck
 - **Experiments:** manually record views, clicks, orders and commission from real sources.
 - **Guardrails:** explain what is and is not connected.
 
+## Master system and agent prompts
+
+- [Master System Prompt](prompts/MASTER_SYSTEM.md) — identity, mission, workflow, truth rules, guardrails, output contract and stop conditions.
+- [Scout](prompts/agents/01-scout.md) — gather permitted product evidence.
+- [Evidence Analyst](prompts/agents/02-evidence-analyst.md) — classify facts, hypotheses and unknowns.
+- [Product Evaluator](prompts/agents/03-product-evaluator.md) — score candidates and apply hard stops.
+- [Creative Strategist](prompts/agents/04-creative-strategist.md) — create distinct content hypotheses.
+- [Script Planner](prompts/agents/05-script-planner.md) — produce short-form scripts and claims ledger.
+- [Claim Reviewer](prompts/agents/06-claim-reviewer.md) — pre-publication review and blocking decisions.
+- [Performance Analyst](prompts/agents/07-performance-analyst.md) — analyze actual experiment results.
+- [Orchestrator](prompts/agents/08-orchestrator.md) — route tasks, enforce controls and human approvals.
+
+These are versioned prompt contracts. They are **not yet wired to a live model or agent runtime**.
+
 ## Important implementation limits
 
 - This first prototype stores records in browser `localStorage` on the current browser/device. It is not multi-user, server-backed, or a safe central database.
@@ -50,8 +64,8 @@ HALVEXI is not a bot farm or a promise of passive income. It is a human-supervis
 
 1. Validate the browser workflow with one physical product and three differentiated concepts.
 2. Implement authenticated API + D1 persistence, migrations, audit trail and export.
-3. Add evidence-backed product research adapters after checking access rules, source quality and costs.
-4. Add provider-agnostic agent workflows with usage limits and human review.
+3. Wire the master prompt and specialist agents through a bounded, provider-agnostic orchestration layer.
+4. Add evidence-backed product research adapters after checking access rules, source quality and costs.
 5. Consider publishing/analytics integrations only where official authorization and platform eligibility are verified.
 
 ## Documentation
